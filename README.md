@@ -27,8 +27,107 @@ function response(room, msg, sender, isGroupChat, replier) {
 - 단말 내 카톡 알림 발생 시 response.js 파일에 등록한 명령어에 따른 메세지 답변 처리</br>
 
 <div align="left">
-  <a><img src="https://user-images.githubusercontent.com/49600974/95353520-4f4b9180-08fe-11eb-9bcd-93ae792b7e86.png" alt="IMAGE ALT TEXT" width=65%></a>
+  <a><img src="https://user-images.githubusercontent.com/49600974/95354097-00522c00-08ff-11eb-8e91-2df19346bf53.png" alt="IMAGE ALT TEXT" width=65%></a>
 </div>
+
+## Core Code
+### Permisson Setting
+- TedPermisson 라이브러리를 활용하여 프로젝트 애플리케이션에 필요한 권한을 요청합니다.
+
+```kotlin
+private fun permissionSetting() {
+    val permissionListener = object : PermissionListener {
+        override fun onPermissionGranted() {
+            NotificationListenerService().initialListScript()
+        }
+        override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {}
+    }
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        TedPermission.with(this)
+            .setPermissionListener(permissionListener)
+            .setRationaleMessage("response.js 파일을 접근하기 위해 권한이 필요합니다.")
+            .setDeniedMessage("[설정] > [권한] 에서 권한을 허용할 수 있어요.")
+            .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            .check()
+    }
+}
+```
+
+### Script Setting
+- 이전에 추가한 response.js 파일의 존재 여부를 확인하며 Script 파일을 초기 설정합니다.
+```kotlin
+fun initialListScript() {
+    try {
+        val scriptDir = File(Environment.getExternalStorageDirectory().toString() + File.separator + "bot")
+        val script = File(scriptDir, "response.js")
+
+        val parseContext = Context.enter()
+        parseContext.optimizationLevel = -1
+
+        val scriptReal = parseContext.compileReader(FileReader(script), script.name, 0, null)
+        val scope = parseContext.initStandardObjects()
+
+        scriptReal.exec(parseContext, scope)
+        data.execScope = scope
+        data.responder = scope.get("response", scope) as Function
+
+        Context.exit()
+    } catch (e: Exception) {
+        Log.e("Exception", e.printStackTrace().toString())
+        Process.killProcess(Process.myPid())
+    }
+}
+```
+
+### Notification Check
+- 단말 내 알림 발생 시 관찰 및 관련 데이터들을 수집하여 다른 메소드로 전달합니다.
+```kotlin
+override fun onNotificationPosted(sbn: StatusBarNotification?) {
+    super.onNotificationPosted(sbn)
+
+    if (sbn!!.packageName == "com.kakao.talk") {
+        val wearableExtender = Notification.WearableExtender(sbn.notification)
+        wearableExtender.actions.forEach { action ->
+            if (action.remoteInputs != null && action.remoteInputs.isNotEmpty()) {
+                if (action.title.toString().toLowerCase().contains("reply") ||
+                    action.title.toString().toLowerCase().contains("Reply") ||
+                    action.title.toString().toLowerCase().contains("답장")) {
+                    kr.hs.dgsw.juyeop.notification.NotificationListenerService.data.execContext = applicationContext
+                    callResponder(sbn.notification.extras.getString("android.title").toString(), sbn.notification.extras.get("android.text").toString(), action)
+                }
+            }
+        }
+    }
+}
+```
+
+### Message Reply
+- 보통 response.js 파일에 작성한 명령어 코드에서 답변을 진행하지만 reply 메소드를 통해서도 가능합니다.
+
+```kotlin
+ class SessionCacheReplier(val session: Notification.Action) {
+    init {
+        reply("메세지 답장 전송")
+    }
+
+    fun reply(value: String) {
+        val sendIntent = Intent()
+        val msg = Bundle()
+
+        session.remoteInputs.forEach { remoteInput ->
+            msg.putCharSequence(remoteInput.resultKey, value)
+        }
+        RemoteInput.addResultsToIntent(session.remoteInputs, sendIntent, msg)
+
+        try {
+            session.actionIntent.send(kr.hs.dgsw.juyeop.notification.NotificationListenerService.data.execContext, 0, sendIntent)
+        } catch (e: Exception) {
+            Log.e("Exception", e.printStackTrace().toString())
+        }
+    }
+}
+```
 
 ## Demo Video
 - 아래 사진을 클릭하여 실제 애플리케이션이 작동하는 모습을 확인해보세요</br>
