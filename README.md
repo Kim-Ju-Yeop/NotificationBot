@@ -23,6 +23,6 @@ function response(room, msg, sender, isGroupChat, replier) {
 - 프로젝트 애플리케이션 실행 시 알림 및 저장공간에 관련된 필수 권한 허용
 - 그 후 시스템에서 NotificationListenerService 서비스 연결 및 단말 내 알림을 받을 준비
 
-<div align="center">
+<div align="left">
   <a href="https://www.youtube.com/watch?v=LmNMuACIZEU"><img src="https://img.youtube.com/vi/LmNMuACIZEU/0.jpg" alt="IMAGE ALT TEXT" width=65%></a>
 </div>
