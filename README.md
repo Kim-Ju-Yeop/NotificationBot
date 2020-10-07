@@ -21,7 +21,8 @@ function response(room, msg, sender, isGroupChat, replier) {
 }
 ```
 - 프로젝트 애플리케이션 실행 시 알림 및 저장공간에 관련된 필수 권한 허용
-- 그 후 시스템에서 NotificationListenerService 서비스 연결 및 단말 내 알림을 받을 준비
+- 시스템에서 NotificationListenerService 서비스 연결 및 단말 내 알림을 받을 준비
+- 단말 내 카톡 알림 발생 시 response.js 파일에 등록한 명령어에 따른 메세지 답변 처리
 
 ## Demo Video
 - 아래 사진을 클릭하여 실제 애플리케이션이 작동하는 모습을 확인하세요.
