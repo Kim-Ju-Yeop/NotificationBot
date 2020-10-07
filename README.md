@@ -23,6 +23,8 @@ function response(room, msg, sender, isGroupChat, replier) {
 - 프로젝트 애플리케이션 실행 시 알림 및 저장공간에 관련된 필수 권한 허용
 - 그 후 시스템에서 NotificationListenerService 서비스 연결 및 단말 내 알림을 받을 준비
 
+## Demo Video
+- 아래 사진을 클릭하여 실제 애플리케이션이 작동하는 모습을 확인하세요.
 <div align="left">
   <a href="https://www.youtube.com/watch?v=LmNMuACIZEU"><img src="https://user-images.githubusercontent.com/49600974/95349743-5ec8db80-08fa-11eb-9c4e-010da14b3c8d.png" alt="IMAGE ALT TEXT" width=65%></a>
 </div>
