@@ -130,7 +130,7 @@ override fun onNotificationPosted(sbn: StatusBarNotification?) {
 ```
 
 ## Demo Video
-- 아래 사진을 클릭하여 실제 애플리케이션이 작동하는 모습을 확인해보세요</br>
+- 아래 사진을 클릭하여 실제 애플리케이션이 작동하는 모습을 확인해보시기 바랍니다.</br>
 
 <div align="left">
   <a href="https://www.youtube.com/watch?v=LmNMuACIZEU"><img src="https://user-images.githubusercontent.com/49600974/95349743-5ec8db80-08fa-11eb-9c4e-010da14b3c8d.png" alt="IMAGE ALT TEXT" width=65%></a>
