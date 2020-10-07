@@ -55,7 +55,7 @@ private fun permissionSetting() {
 ```
 
 ### Script Setting
-- 이전에 추가한 response.js 파일의 존재 여부를 확인하며 Script 파일을 초기 설정합니다.
+- 앞에서 추가한 response.js 파일의 존재 여부를 확인하며 Script 파일을 초기 설정합니다.
 ```kotlin
 fun initialListScript() {
     try {
@@ -103,7 +103,7 @@ override fun onNotificationPosted(sbn: StatusBarNotification?) {
 ```
 
 ### Message Reply
-- 보통 response.js 파일에 작성한 명령어 코드에서 답변을 진행하지만 reply 메소드를 통해서도 가능합니다.
+- 보통 response.js 파일에 작성한 명령어 코드에서 답변을 수행하지만 reply 메소드를 통해서도 가능합니다.
 
 ```kotlin
  class SessionCacheReplier(val session: Notification.Action) {
@@ -135,3 +135,10 @@ override fun onNotificationPosted(sbn: StatusBarNotification?) {
 <div align="left">
   <a href="https://www.youtube.com/watch?v=LmNMuACIZEU"><img src="https://user-images.githubusercontent.com/49600974/95349743-5ec8db80-08fa-11eb-9c4e-010da14b3c8d.png" alt="IMAGE ALT TEXT" width=65%></a>
 </div>
+
+## Reference
+- zxc010613 개발자님의 <a href="https://github.com/zxc010613/jskakaobot">jskakaobot 프로젝트</a>
+- ljuwon321 개발자님의 <a href="https://github.com/ljuwon321/ScriptableKakaoBot">ScriptableKakaoBot 프로젝트</a>
+
+## Close
+- 위 프로젝트에 대해서 궁금한 것이 있다면 Issues 등록해주시면 빠르게 답변하겠습니다.
