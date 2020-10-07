@@ -54,7 +54,7 @@ private fun permissionSetting() {
 }
 ```
 
-### Script Setting
+### Initial Script
 - 앞에서 추가한 response.js 파일의 존재 여부를 확인하며 Script 파일을 초기 설정합니다.
 ```kotlin
 fun initialListScript() {
