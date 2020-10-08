@@ -93,7 +93,7 @@ override fun onNotificationPosted(sbn: StatusBarNotification?) {
                 if (action.title.toString().toLowerCase().contains("reply") ||
                     action.title.toString().toLowerCase().contains("Reply") ||
                     action.title.toString().toLowerCase().contains("답장")) {
-                    kr.hs.dgsw.juyeop.notification.NotificationListenerService.data.execContext = applicationContext
+                    data.execContext = applicationContext
                     callResponder(sbn.notification.extras.getString("android.title").toString(), sbn.notification.extras.get("android.text").toString(), action)
                 }
             }
