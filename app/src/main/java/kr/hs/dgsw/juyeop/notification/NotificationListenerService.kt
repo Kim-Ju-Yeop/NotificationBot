@@ -1,4 +1,4 @@
-package kr.hs.dgsw.juyeop.notification.service
+package kr.hs.dgsw.juyeop.notification
 
 import android.app.Notification
 import android.app.RemoteInput

@@ -7,22 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28c7246b-a80f-441f-b5d4-2d5ca9538014" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/api/ApiClass.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_refresh_24.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/view/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/NotificationListenerService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/service/NotificationListenerService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/service/NotificationListenerService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/kr/hs/dgsw/juyeop/notification/NotificationListenerService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Juyeop_Phone" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="R39M30E6N4R" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -81,9 +84,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="kr.hs.dgsw.juyeop.notification" />
+      <recent name="kr.hs.dgsw.juyeop.notification.listener" />
+      <recent name="kr.hs.dgsw.juyeop.notification.view" />
       <recent name="kr.hs.dgsw.juyeop.notification.api" />
       <recent name="kr.hs.dgsw.juyeop.notification.service" />
-      <recent name="kr.hs.dgsw.juyeop.notification.view" />
     </key>
   </component>
   <component name="RunManager">
@@ -164,26 +169,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="245" y="189" key="#PSD/0.0.1440.900@0.0.1440.900" timestamp="1602229196145" />
-    <state x="478" y="0" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1602230825646">
+    <state x="478" y="0" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1602232132071">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="478" y="0" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1602230825646" />
-    <state width="1398" height="141" key="GridCell.Tab.0.bottom" timestamp="1602229589544">
+    <state x="478" y="0" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1602232132071" />
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom" timestamp="1602232139226">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602229589544" />
-    <state width="1398" height="141" key="GridCell.Tab.0.center" timestamp="1602229589543">
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602232139226" />
+    <state width="1398" height="238" key="GridCell.Tab.0.center" timestamp="1602232139225">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602229589543" />
-    <state width="1398" height="141" key="GridCell.Tab.0.left" timestamp="1602229589542">
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602232139225" />
+    <state width="1398" height="238" key="GridCell.Tab.0.left" timestamp="1602232139224">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602229589542" />
-    <state width="1398" height="141" key="GridCell.Tab.0.right" timestamp="1602229589543">
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602232139224" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right" timestamp="1602232139225">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602229589543" />
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602232139225" />
     <state width="1398" height="284" key="GridCell.Tab.1.bottom" timestamp="1602226899539">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
