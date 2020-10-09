@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Notification</string>
+    <string name="state_off">NotificationListenerService 해제되었습니다.</string>
+    <string name="state_on">NotificationListenerService 연결되었습니다.</string>
 </resources>

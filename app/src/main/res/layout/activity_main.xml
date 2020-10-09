@@ -3,15 +3,52 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E6A71F"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/reloadButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_refresh_24"
+            android:background="@android:color/transparent"
+            android:tint="@android:color/white"
+            android:onClick="reloadData"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            tools:ignore="ContentDescription" />
+
+        <Switch
+            android:id="@+id/onOffSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp" />
+    </Toolbar>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/stateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NotificationListenerService 연결되었습니다."
+        android:text="@string/state_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

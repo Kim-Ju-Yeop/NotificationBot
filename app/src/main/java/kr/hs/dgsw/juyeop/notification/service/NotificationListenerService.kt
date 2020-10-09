@@ -1,4 +1,4 @@
-package kr.hs.dgsw.juyeop.notification
+package kr.hs.dgsw.juyeop.notification.service
 
 import android.app.Notification
 import android.app.RemoteInput
@@ -11,10 +11,12 @@ import android.service.notification.StatusBarNotification
 import android.text.Html
 import android.text.SpannableString
 import android.util.Log
-import android.widget.Toast
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Function
 import org.mozilla.javascript.ScriptableObject
+import com.faendir.rhino_android.RhinoAndroidHelper
+import kr.hs.dgsw.juyeop.notification.api.ApiClass
+import kr.hs.dgsw.juyeop.notification.view.MainActivity
 import java.io.File
 import java.io.FileReader
 
@@ -27,20 +29,12 @@ class NotificationListenerService: NotificationListenerService() {
         lateinit var execContext: android.content.Context
     }
 
-    override fun onListenerConnected() {
-        super.onListenerConnected()
-        Log.e("Connected", "NotificationListenerService 연결되었습니다.")
-        Toast.makeText(applicationContext, "NotificationListenerService 연결되었습니다.", Toast.LENGTH_LONG).show()
-    }
-
-    override fun onListenerDisconnected() {
-        super.onListenerDisconnected()
-        Log.e("Disconnected", "NotificationListenerService 해제되었습니다.")
-        Toast.makeText(applicationContext, "NotificationListenerService 해제되었습니다.", Toast.LENGTH_LONG).show()
-    }
-
-    override fun onNotificationPosted(sbn: StatusBarNotification?) {
+    override fun onNotificationPosted(sbn: StatusBarNotification) {
         super.onNotificationPosted(sbn)
+
+        with(MainActivity.key) {
+            if (!getState(applicationContext)) return
+        }
 
         if (sbn!!.packageName == "com.kakao.talk") {
             val wearableExtender = Notification.WearableExtender(sbn.notification)
@@ -65,8 +59,11 @@ class NotificationListenerService: NotificationListenerService() {
             val parseContext = Context.enter()
             parseContext.optimizationLevel = -1
 
+            val rhino = RhinoAndroidHelper().enterContext()
             val scriptReal = parseContext.compileReader(FileReader(script), script.name, 0, null)
-            val scope = parseContext.initStandardObjects()
+
+            val scope = rhino.initStandardObjects()
+            ScriptableObject.defineClass(scope, ApiClass.Utils::class.java, false, true)
 
             scriptReal.exec(parseContext, scope)
             data.execScope = scope
@@ -96,17 +93,15 @@ class NotificationListenerService: NotificationListenerService() {
         }
 
         try {
-            data.responder.call(parseContext, data.execScope, data.execScope, arrayOf<Any> (room, msg2, sender, msg is SpannableString, SessionCacheReplier(session)))
+            data.responder.call(parseContext,
+                data.execScope,
+                data.execScope, arrayOf<Any> (room, msg2, sender, msg is SpannableString, SessionCacheReplier(session)))
         } catch (e: Exception) {
             Log.e("Exception", e.printStackTrace().toString())
         }
     }
 
     class SessionCacheReplier(val session: Notification.Action) {
-        init {
-            reply("메세지 답장 전송")
-        }
-
         fun reply(value: String) {
             val sendIntent = Intent()
             val msg = Bundle()
