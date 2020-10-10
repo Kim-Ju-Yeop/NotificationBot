@@ -38,7 +38,7 @@ function response(room, msg, sender, isGroupChat, replier) {
 - TedPermisson 라이브러리를 활용하여 프로젝트 애플리케이션에 필요한 권한을 요청합니다.
 
 ```kotlin
-private fun permissionSetting() {
+fun permissionSetting() {
     val permissionListener = object : PermissionListener {
         override fun onPermissionGranted() {
             NotificationListenerService().initialListScript()
@@ -115,10 +115,10 @@ override fun onNotificationPosted(sbn: StatusBarNotification) {
 ```
 
 ### Message Reply
-- response.js 파일에서 특정 명령어에 대한 응답을 보내기 위해 SessionCacheReplier 클래스에 포함된 reply 메소드를 호출합니다.
+- response.js 파일에서 특정 명령어에 대한 응답을 보내기 위해 reply 메소드를 호출합니다.
 
 ```kotlin
- class SessionCacheReplier(val session: Notification.Action) {
+class SessionCacheReplier(val session: Notification.Action) {
     fun reply(value: String) {
         val sendIntent = Intent()
         val msg = Bundle()
@@ -177,7 +177,7 @@ class Utils: ScriptableObject() {
 - 아래 사진을 클릭하여 실제 애플리케이션이 작동하는 모습을 확인해보시기 바랍니다.</br>
 
 <div align="left">
-  <a href="https://www.youtube.com/watch?v=LmNMuACIZEU"><img src="https://user-images.githubusercontent.com/49600974/95349743-5ec8db80-08fa-11eb-9c4e-010da14b3c8d.png" alt="IMAGE ALT TEXT" width=65%></a>
+  <a href="https://youtu.be/16KTr0SJQAI"><img src="https://user-images.githubusercontent.com/49600974/95648080-9492dd80-0b0f-11eb-8012-fecf6128552a.png" alt="IMAGE ALT TEXT" width=65%></a>
 </div>
 
 ## Reference
