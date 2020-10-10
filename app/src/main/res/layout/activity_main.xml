@@ -39,7 +39,6 @@
             android:id="@+id/onOffSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="false"
             android:layout_gravity="end"
             android:layout_marginEnd="10dp" />
     </Toolbar>

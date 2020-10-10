@@ -40,6 +40,10 @@ class MainActivity : AppCompatActivity() {
 
     fun checkSwitchChange() {
         onOffSwitch.isChecked = key.getState(applicationContext)
+
+        if (key.getState(applicationContext)) stateTextView.text = resources.getString(R.string.state_on)
+        else stateTextView.text = resources.getString(R.string.state_off)
+
         onOffSwitch.setOnCheckedChangeListener { view, state ->
             if (state) stateTextView.text = resources.getString(R.string.state_on)
             else stateTextView.text = resources.getString(R.string.state_off)

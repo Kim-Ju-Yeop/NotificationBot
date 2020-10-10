@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.faendir.rhino:rhino-android:1.5.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bd46c9fe63183b59870d7a296d90050/jetified-rhino-android-1.5.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bd46c9fe63183b59870d7a296d90050/jetified-rhino-android-1.5.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bd46c9fe63183b59870d7a296d90050/jetified-rhino-android-1.5.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd845ed7ac729a2bd4c488fad35d5ba2/jetified-rhino-android-1.5.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd845ed7ac729a2bd4c488fad35d5ba2/jetified-rhino-android-1.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd845ed7ac729a2bd4c488fad35d5ba2/jetified-rhino-android-1.5.2/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.faendir.rhino/rhino-android/1.5.2/fd082a639a8bbb9a7244f3db278a5654a6bfc75e/rhino-android-1.5.2-javadoc.jar!/" />
