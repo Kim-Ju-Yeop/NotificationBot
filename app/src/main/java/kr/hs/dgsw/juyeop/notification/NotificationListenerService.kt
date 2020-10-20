@@ -62,6 +62,8 @@ class NotificationListenerService: NotificationListenerService() {
             val rhino = RhinoAndroidHelper().enterContext()
             val scriptReal = parseContext.compileReader(FileReader(script), script.name, 0, null)
 
+            // 아래로 내려가지 못함
+
             val scope = rhino.initStandardObjects()
             ScriptableObject.defineClass(scope, ApiClass.Utils::class.java, false, true)
 
